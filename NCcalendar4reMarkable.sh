@@ -17,7 +17,9 @@
 #	tablet, you might want to either comment this line or replace qpdfview
 #	with your own PDF viewing application.
 #
-#
+#	rmapi (https://github.com/juruen/rmapi) can be used to directly push the
+#	calendar onto the tablet using its cloud connection. Please refer to rmapi
+#	directly for how to set it up.
 
 
 today='$date +%F' # for we don't want to override calendars and lose dates...
@@ -64,3 +66,7 @@ qpdfview Cal.pdf
 mv Cal.pdf Cal_$today.pdf 
 
 rm Calendar.rem CalendarIso.rem Cal.ps Cal.pdf
+
+rmapi put Cal_$today.pdf
+
+exit = 0
