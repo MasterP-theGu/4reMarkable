@@ -22,7 +22,7 @@
 #	directly for how to set it up.
 
 
-today='$date +%F' # for we don't want to override calendars and lose dates...
+today=$(date +%F) # for we don't want to override calendars and lose dates...
 
 # now let's download the actual calendar from our Nextcloud instance.
 # As I use a self-signed certificate, I need to switch off certificate checks,
